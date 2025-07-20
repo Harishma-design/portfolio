@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<title>PORTFOLIO</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .image-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px; /* space between the two images */
+      margin-bottom: 20px;
+    }
+
+    .image-row img {
+      width: 300px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .text-row {
+      max-width: 600px;
+      text-align: center;
+    }
+
+    .text-row h3 {
+      margin-bottom: 10px;
+    }
+
+    .text-row p {
+      line-height: 1.6;
+    }
+  
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('hari.jpg');
+  min-height: 100%;
+}
+
+.btn {
+  background-color: rgb(155, 164, 167);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: rgb(65, 65, 67);
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 50px;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+  color: white;
+}
+
+.containerTab {
+  padding: 20px;
+  color: white;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Closable button inside the image */
+.closebtn {
+  float: right;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+</style>
+<body>
+
+<!-- Sidebar with image -->
+<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+  <div class="bgimg"></div>
+</nav>
+
+<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+<nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Portfolio</a>
+    <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">About</a>
+    <a href="#myskills" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">My Skills</a>
+    <a href="#academicbackground" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Academic Background</a>
+    <a href="#projects" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Projects</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="w3-main w3-padding-large" style="margin-left:40%">
+
+  <!-- Menu icon to open sidebar -->
+  <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+
+  <!-- Header -->
+  <header class="w3-container w3-center" style="padding:128px 16px" id="home">
+    <h1 class="w3-jumbo"><b>Harishma Shree G</b></h1>
+    <p>Software Engineer.</p>
+    <script>
+  document.querySelector(".download-btn").addEventListener("click", function() {
+    alert("Your download will begin shortly!");
+     });
+    </script>
+    <a href="resume1.jpg" download="Harishma_Shree_Resume.pdf" class="download-btn">
+        <button class="btn"><i class="fa fa-download"></i> Download Resume</button>
+
+      </a>
+  
+  </header>
+  <!-- Portfolio Section -->
+  <div class="w3-padding-32 w3-content" id="portfolio">
+    <h2 class="w3-text-grey">My Portfolio</h2>
+    <hr class="w3-opacity">
+    <!-- Grid for photos -->
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half">
+        <img src="myimage.jpg" style="width:100%">
+        <img src="pic4.jpg" style="width:100%">
+        <img src="pic5.jpg" style="width:100%">
+        <img src="pic6.jpg" style="width:100%">
+      </div>
+
+      <div class="w3-half">
+        <img src="pic.jpg" style="width:100%">
+        <img src="pic1.jpg" style="width:100%">
+        <img src="pic2.jpg" style="width:100%">
+        <img src="pic3.jpg" style="width:100%">
+      </div>
+    <!-- End photo grid -->
+    </div>
+  <!-- End Portfolio Section -->
+  </div>
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
+    <h2>About</h2>
+    <hr class="w3-opacity">
+    <p>I'm Harishma Shree G, a third-year Engineering IT student with a strong passion for coding and software development. My journey into technology began early, and I’ve spent countless hours honing my skills in various programming languages, including Python, Java, and C. I thrive in solving complex problems, building efficient systems, and exploring new technologies.
+I’m constantly pushing myself to learn and grow, whether it’s through coursework, personal projects, or collaborating with others on open-source initiatives. In addition to my academic studies, I enjoy experimenting with web development, machine learning, and automation projects.
+With a keen interest in both the technical and creative aspects of programming, I strive to write clean, scalable code while embracing innovative solutions. I’m excited about the future of tech and the endless opportunities to create impactful software solutions.
+When I'm not coding, you can find me working on improving my problem-solving skills, participating in hackathons, or contributing to tech communities. I’m always open to learning new things and collaborating on exciting projects.
+    </p>
+    <h3 class="w3-padding-16" id="myskills">My Skills</h3>
+    <p class="w3-wide">JAVA</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:85%">85%</div>
+    </div>
+    <p class="w3-wide">WEB DESIGN</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:45%">45%</div>
+    </div>
+    <p class="w3-wide">APPLICATION DESIGN</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:60%">60%</div>
+    </div>
+    <p class="w3-wide">PHOTOGRAPHY</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:80%">80%</div>
+    </div><br>
+  <!-- End About Section -->
+  </div>
+  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="academicbackground">
+    <script>
+      function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+    </script>
+    <h2>Academic Background</h2>
+    <hr class="w3-opacity">
+    <div class="row">
+  <div class="column" onclick="openTab('b1');" style="background:rgb(208, 204, 204);">B.Tech in IT</div>
+  <div class="column" onclick="openTab('b2');" style="background:rgb(135, 135, 136);">HSC</div>
+  <div class="column" onclick="openTab('b3');" style="background:rgb(73, 72, 72);">SSLC</div>
+</div>
+
+<!-- The expanding grid (hidden by default) -->
+<div id="b1" class="containerTab" style="display:none;background:rgb(208, 204, 204)">
+  <!-- If you want the ability to close the container, add a close button -->
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+  <h2>Velammal college of engineering and technology</h2>
+  <p>CGPA - 8.23</p>
+</div>
+
+<div id="b2" class="containerTab" style="display:none;background:rgb(135, 135, 136)">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+  <h2>AJ School</h2>
+  <p>ICSE</p>
+     <p>Score - 88%</p>
+</div>
+
+<div id="b3" class="containerTab" style="display:none;background:rgb(73, 72, 72)">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+  <h2>AJ School</h2>
+  <p>ICSE</p>
+    <p>Score - PASS</p>
+</div>
+    <div class="w3-padding-32 w3-project w3-text-grey" id="projects" style="margin-bottom:64px">
+    <h2>Projects</h2>
+    <hr class="w3-opacity">
+    <div class="container">
+    <!-- First row: images -->
+    <div class="image-row">
+      <img src="iot.jpg" alt="IOT Project Image 1">
+      <img src="iot1.jpg" alt="IOT Project Image 2">
+    </div>
+
+    <!-- Second row: text -->
+    <div class="text-row">
+      <h3>IOT PROJECT (Hardware)</h3>
+      <p>
+        An IOT project developed to prevent accidents in the U-turn areas mainly in the hill stations.
+        This is done for a symposium and this project is in the low level, but this idea can be expanded in the near future.
+      </p>
+    </div>
+  </div>    
+  <div class="container">
+    <!-- First row: images -->
+    <div class="image-row">
+      <img src="agri.jpg" alt="agri Project Image 1">
+      <img src="agri2.jpg" alt="agri Project Image 2">
+    </div>
+
+    <!-- Second row: text -->
+    <div class="text-row">
+      <h3>AGRI PROJECT (Mobile app)</h3>
+      <p>
+        An IOT project developed for monitoring the temperature and humidity and also to check the moisture content in the soil.Then smoke sensor is also used to detect the smoke if the crop is on fire.      </p>
+    </div>
+  </div>    
+  <!-- Contact Section -->
+  <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
+    <h2>Contact Me</h2>
+    <hr class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> 117/3,Sourashtra Teachers colony,Annupanadi,Madurai-9.</p>
+      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: 8148183481</p>
+      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: harishma83481@gmail.com</p>
+    </div>
+    <p>Lets get in touch. Send me a message:</p>
+    <form action="mailto:harishma83481@gmail.com" method="post" enctype="text/plain" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name" ></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+  <!-- End Contact Section -->
+  </div>  
+  
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-dark-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
+    <a href="https://pin.it/hZYOxaA4i" target="_blank" title="Pinterest"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
+    <a href="www.linkedin.com/in/harishma-shree-13bab92a0" target="_blank" title="LinkedIn"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+    <a href="https://github.com/harishma-design" target="_blank" title="GitHub"><i class="fa fa-github w3-hover-opacity"></i></a>
+  <!-- End footer -->
+  </footer>
+  
+<!-- END PAGE CONTENT -->
+</div>
+
+<script>
+// Open and close sidebar
+function openNav() {
+  document.getElementById("mySidebar").style.width = "60%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
